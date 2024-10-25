@@ -22,6 +22,17 @@
     ../../modules/vm-guest-services.nix
     ../../modules/local-hardware-clock.nix
   ];
+ 
+    # CURSOR
+    environment.variables = {
+        XCURSOR_THEME = "Whitesur";
+        XCURSOR_SIZE = "16";
+        GTK_THEME = "Adwaita:dark";
+        QT_QPA_PLATFORMTHEME = "qt5ct";  # Use qt5ct for Qt configuration
+        QT_STYLE_OVERRIDE = "Fusion";   
+
+    };
+
 
   # BOOT related stuff
   boot = {
@@ -99,6 +110,7 @@
   #  enable = true;
   #  theme = "nixos";
   #};
+  # CURSOR THEME
 
 
   # Extra Module Options
@@ -119,7 +131,7 @@
   networking.timeServers = options.networking.timeServers.default ++ [ "pool.ntp.org" ];
 
   # Set your time zone.
-  time.timeZone = "Asia/Seoul";
+  time.timeZone = "Asia/Kolkata";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -262,6 +274,12 @@
     rust-analyzer 
     rustup
     vscode
+    whitesur-cursors
+    oh-my-zsh
+    zsh
+    zsh-powerlevel10k
+        #adwaita-icon-theme-legacy  # For GTK themes
+        #qt5ct # FOr QT themes
     spotify
     vlc
     obsidian
