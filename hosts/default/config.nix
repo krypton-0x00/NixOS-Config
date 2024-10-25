@@ -257,6 +257,10 @@
     wlogout
     yad
     yt-dlp
+    #Addons
+    neovim
+    rust-analyzer 
+    rustup
     vscode
     spotify
     vlc
